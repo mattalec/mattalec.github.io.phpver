@@ -1,0 +1,366 @@
+/*///////////////////// general.ejs /////////////////////////////*/
+/*//////////////////////////////////////////////////////////////*/
+
+canvas {
+	/* border: 1px solid black; */
+}
+
+body {
+	height: 100%;
+	width: 100%;
+	margin: 0;
+}
+
+.col0 {	left: 12.5vh }
+.col1 {	left: 25vh }
+.col2 {	left: 37.5vh }
+.col3 {	left: 50vh }
+.col4 {	left: 62.5vh }
+.col5 {	left: 75vh }
+
+.row0 {	top: 12.5vh }
+.row1 {	top: 25vh }
+.row2 {	top: 37.5vh }
+.row3 {	top: 50vh }
+.row4 {	top: 62.5vh }
+.row5 {	top: 75vh }
+
+.colblack0 {	left: 25vh }
+.colblack1 {	left: 37.5vh }
+.colblack2 {	left: 50vh }
+.colblack3 {	left: 62.5vh }
+.colblack4 {	left: 75vh }
+.colblack5 {	left: 87.5vh }
+
+.square {
+	position: absolute;
+	height: 12.5vh;
+	width: 12.5vh;
+	padding: 0;
+	margin: 0;
+	border: 0;
+}
+
+.type-font {font-family: 'Courier New', Courier, monospace;}
+
+/*///////////////////// _menu.ejs /////////////////////////////*/
+/*//////////////////////////////////////////////////////////////*/
+
+/* Links inside the dropdown */
+.dropbtn {
+	background-color: white;
+	color: black;
+	padding: 20%;
+	height: 12.58vh;
+	width: 12.58vh;
+	font-size: 2vh;
+	border: none;
+}
+
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+	position: absolute;
+	display: inline-block;
+	z-index: 5;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+	display: none;
+	position: absolute;
+	background-color: #f1f1f1;
+	height: 62.6vh;
+	width: 12.58vh;
+	box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+ 	z-index: 1;
+}
+.dropdown-content a {
+	color: black;
+	width: 12.5vh;
+	height: 12.5vh;
+	line-height: 12.5vh;
+	font-size: 1.5em;
+	font-weight: bold;
+	padding: 0;
+	text-align: center;
+	text-decoration: none;
+	display: block;
+}
+
+.title-div input[type=checkbox]{
+	display: none;
+}
+
+.weather-icon {
+	width: 66%;
+	height: 66%;
+	filter: url("data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\'><filter id=\'grayscale\'><feColorMatrix type=\'matrix\' values=\'0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0\'/></filter></svg>#grayscale"); /* Firefox 3.5+ */
+  filter: gray; /* IE6-9 */
+  -webkit-filter: grayscale(100%); /* Chrome 19+ & Safari 6+ */
+}
+.weather-icon:hover {
+	filter: none;
+  -webkit-filter: grayscale(0%);
+}
+
+.weather-icon-board:hover {
+	filter: none;
+  -webkit-filter: invert(100%);
+}
+
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {background-color: #ddd;}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {display: block;}
+
+/* Change the background color of the dropdown button when the dropdown content is shown */
+.dropdown:hover .dropbtn {
+	background-color: black;
+	color: white;
+}
+
+.menu-img {
+	width: 20px;
+}
+
+.title {
+	background-color: white;
+	text-align: center;
+	position: absolute;
+	width: 100%;
+	height: 10.58vh;
+	font-size: 8vh;
+	padding-top: 2vh;
+	font-weight: bold;
+	background:  #f5ecd5;
+}
+
+/*//////////////////////// title ///////////////////////////////*/
+/*//////////////////////////////////////////////////////////////*/
+
+.title-div {
+	position: absolute;
+	height: 12.5vh;
+	width: 125vh;
+	margin-left: 12.5vh;
+	z-index: 3;
+}
+.title-letter {
+	position: relative;
+	float: left;
+	height: 12.5vh;
+	width: 12.5vh;
+	text-align: center;
+	line-height: 12.5vh;
+	font-size: 12.5vh;
+	font-weight: bold;
+	font-family: Garamond, serif;	
+}
+
+/*///////////////////// words.ejs /////////////////////////////*/
+/*//////////////////////////////////////////////////////////////*/
+
+.wordsquare:hover button {
+	background-color: antiquewhite;
+	font-size: 0.8em;
+}
+
+.wordbox {
+	background-color: white;
+	position: absolute;
+
+	text-align: center;
+	font-family: 'Courier New', Courier, monospace;
+
+	top: 5vh;
+	left: 15vh;
+	height: 90vh;
+	width: 85vw;
+	z-index: 5;
+}
+
+.word-title {
+	padding-bottom: 5px;
+}
+
+.word-content {
+	margin: 0 5vh 0 5vh;
+	height: 75vh;
+}
+
+.exit-button {
+	position: absolute;
+	top: 0vh;
+	right: 0vw;
+	height: 8vh;
+	width: 8vw;
+}
+.exit-button:hover {background-color: grey;}
+
+/*///////////////////// sounds.ejs /////////////////////////////*/
+/*//////////////////////////////////////////////////////////////*/
+
+.sound-title {
+	text-align: center;
+	color: white;
+	font-size: 0.8em;
+	font-weight: bold;
+	line-height: 12.5vh;
+	width: 12.5vh;
+	height: 12.5vh;
+}
+
+/*///////////////////// code.ejs /////////////////////////////*/
+/*////////////////////////////////////////////////////////////*/
+
+.project-container {
+	position: absolute;
+	height: 50vh;
+	width: 25vh;
+	margin-top: 25vh;
+	margin-left: 25vh;
+	background-color: antiquewhite;
+	z-index: 5;
+	border-radius: 2vh;
+	text-align: center;
+}
+
+.project-title {
+	position: relative;
+	margin-top: 2vh;
+	font-size: 4vh;
+	font-weight: bold;
+}
+
+.project-desc {
+	position: relative;
+	margin: 2vh;
+	font-size: 2.5vh;
+}
+
+.project-redirect {
+	position: absolute;
+	background-color: #202639;
+	width: 100%;
+	height: 7.5vh;
+	bottom: 3vh;
+	line-height: 7.5vh;
+	color: antiquewhite;
+	font-weight: bold;
+	font-size: 2.8vh;
+}
+.project-redirect:hover {
+	background-color: #28314d;
+	color: white;
+}
+
+.code-break {
+	background-color: #202639;
+	height: .5vh;
+	margin-top: 1vh;
+}
+
+.outer-ring {
+	position: absolute;
+	height: 52vh;
+	width: 27vh;
+	margin-top: 24vh;
+	margin-left: 24vh;
+	background-color: antiquewhite;
+	z-index: 3;
+	border-radius: 2.5vh;
+}
+
+.inner-ring {
+	position: absolute;
+	height: 51vh;
+	width: 26vh;
+	margin-top: 24.5vh;
+	margin-left: 24.5vh;
+	background-color: #202639;
+	z-index: 4;
+	border-radius: 2.2vh;
+}
+
+/*///////////////////// project /////////////////////////////*/
+/*///////////////////////////////////////////////////////////*/
+
+.rectangle {
+	position: absolute;
+	height: 12.5vh;
+	width: 25vh;
+	padding: 0;
+
+	text-align: center;
+	line-height: 12.5vh;
+
+	font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+	font-size: 2.3vh;
+	font-weight: bold;
+	
+	border-radius: 2vh;
+	background-color: antiquewhite;
+	color: #202639;
+	z-index: 5;
+}
+.rectangle:hover {
+	background-color: #28314d;
+	color: white;
+}
+
+.outer-ringr {
+	position: absolute;
+	height: 13.5vh;
+	width: 26vh;
+
+	border-radius: 2.5vh;
+	background-color: antiquewhite;
+	z-index: 3;
+}
+
+.inner-ringr {
+	position: absolute;
+	height: 13vh;
+	width: 25.5vh;
+	
+	border-radius: 2.2vh;
+	background-color: #202639;
+	z-index: 4;
+}
+
+.pdf {
+	position: absolute;
+	width: 100%;
+	height: 87.5vh;
+	margin-top: 12.5vh;
+}
+
+.download {
+	position: absolute;
+	top: 92vh;
+	left: 83vw;
+	height: 5vh;
+	width: 10vh;
+	text-align: center;
+	line-height: 5vh;
+	background-color: antiquewhite;
+	font-size: 2vh;
+	border-radius: 1vh;
+}
+
+.next {
+	margin-left: 11vh;
+}
+
+.fill {
+	text-decoration: inherit;
+	color: inherit;
+	width: 100%;
+	height: 100%;
+	margin: 0;
+	padding: 0;
+	font-weight: bold;
+	border: black 5px;
+}
